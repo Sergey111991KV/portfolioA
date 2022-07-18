@@ -1,0 +1,9 @@
+<h2>UI Kit</h2>
+
+<nav>
+  <ul class="list">
+    <li class="list__item" *ngFor="let route of routes">
+      <a class="list__link" [routerLink]="route">{{route}}</a>
+    </li>
+  </ul>
+</nav>
