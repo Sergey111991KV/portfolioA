@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "deploy-gh": "npx angular-cli-ghpages --dir=dist/portfolio-angular",
+    "build-deploy": "ng build --base-href \"https://sergey111991kv.github.io/portfolioA/\"",
+    "deploy-gh": "npm run build-deploy && npx angular-cli-ghpages --dir=dist/portfolio-angular",
     "test": "ng test"
   },
   "private": true,
