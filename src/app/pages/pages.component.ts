@@ -4,9 +4,9 @@ import { Component, OnInit } from '@angular/core';
     selector: 'ngx-pages',
     styleUrls: ['pages.component.scss'],
     template: `
-<!--        <ngx-default-layout>-->
+        <ngx-layout>
             <router-outlet></router-outlet>
-<!--        </ngx-default-layout>-->
+        </ngx-layout>
     `,
 })
 export class PagesComponent implements OnInit {
