@@ -9,7 +9,7 @@ const routes: Routes = [
     children: [
       {
         path: 'ui-kit',
-        loadChildren: () => import('../ui-kit/ui-kit.module').then((m) => m.UiKitModule),
+        loadChildren: () => import('./ui-kit-page/ui-kit-page.module').then((m) => m.UiKitPageModule),
       },
       {
         path: 'pipes',
