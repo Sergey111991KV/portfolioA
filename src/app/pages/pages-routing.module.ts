@@ -14,9 +14,13 @@ const routes: Routes = [
       {
         path: 'pipes',
         loadChildren: () => import('./pipes/pipes.module').then((m) => m.PipesModule),
+      },
+      {
+        path: 'rxjs',
+        loadChildren: () => import('./rxjs/rxjs.module').then((m) => m.RxjsModule),
       }
     ]
-  },
+  }
 ];
 
 @NgModule({

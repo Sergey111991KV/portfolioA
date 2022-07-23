@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Event, NavigationStart, Router } from '@angular/router';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-ui-kit-page',
@@ -6,10 +8,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ui-kit-page.component.css']
 })
 export class UiKitPageComponent implements OnInit {
+  public isChildRoute!: boolean;
+  constructor(
+    private router: Router,
+  ) { }
 
-  constructor() { }
+  public ngOnInit(): void {
+    this.router.events
+      .pipe(filter(this.eventIsNavigationStart))
+      .subscribe((evt) => {
+        this.isChildRoute = evt.url !== '/pages/ui-kit';
+      });
+    this.isChildRoute = this.router.url !== '/pages/ui-kit';
+  }
 
-  ngOnInit(): void {
+  private eventIsNavigationStart(event: Event): event is NavigationStart {
+    return event instanceof NavigationStart;
   }
 
 }

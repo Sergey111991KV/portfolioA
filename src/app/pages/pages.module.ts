@@ -1,8 +1,9 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { PagesComponent } from "./pages.component";
-import { PagesRoutingModule } from "./pages-routing.module";
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {PagesComponent} from "./pages.component";
+import {PagesRoutingModule} from "./pages-routing.module";
 import {LayoutModule} from "../layout/layout.module";
+// import {UiKitModule} from "../ui-kit/ui-kit.module";
 
 
 @NgModule({
@@ -12,7 +13,9 @@ import {LayoutModule} from "../layout/layout.module";
   imports: [
     CommonModule,
     PagesRoutingModule,
-    LayoutModule
+    LayoutModule,
+    // UiKitModule
   ]
 })
-export class PagesModule { }
+export class PagesModule {
+}
