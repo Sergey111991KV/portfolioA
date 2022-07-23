@@ -5,13 +5,15 @@ import { UiKitPageRoutingModule } from './ui-kit-page-routing.module';
 import { UiKitHomeComponent } from './ui-kit-home/ui-kit-home.component';
 import { UiKitTablePageComponent } from './ui-kit-table-page/ui-kit-table-page.component';
 import {UiKitModule} from "../../ui-kit/ui-kit.module";
+import { UiKitFormComponent } from './ui-kit-form/ui-kit-form.component';
 
 
 @NgModule({
   declarations: [
     UiKitPageComponent,
     UiKitHomeComponent,
-    UiKitTablePageComponent
+    UiKitTablePageComponent,
+    UiKitFormComponent
   ],
   imports: [
     CommonModule,
