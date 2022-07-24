@@ -6,6 +6,7 @@ import { UiKitHomeComponent } from './ui-kit-home/ui-kit-home.component';
 import { UiKitTablePageComponent } from './ui-kit-table-page/ui-kit-table-page.component';
 import {UiKitModule} from "../../ui-kit/ui-kit.module";
 import { UiKitFormComponent } from './ui-kit-form/ui-kit-form.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -18,7 +19,9 @@ import { UiKitFormComponent } from './ui-kit-form/ui-kit-form.component';
   imports: [
     CommonModule,
     UiKitPageRoutingModule,
-    UiKitModule
+    UiKitModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class UiKitPageModule { }

@@ -1,0 +1,18 @@
+<p>ui-kit-form works!</p>
+
+<form [formGroup]="formGroup"  (ngSubmit)="onFormSubmit()" >
+  <app-ui-kit-input formControlName="name">
+
+  </app-ui-kit-input>
+<!--  <input formControlName="name">-->
+
+<!--  <app-ui-kit-select formControlName="type">-->
+
+<!--  </app-ui-kit-select>-->
+  <select formControlName="type"></select>
+
+  <button
+    type="submit">
+    Save
+  </button>
+</form>

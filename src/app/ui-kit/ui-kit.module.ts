@@ -4,6 +4,9 @@ import { UiKitComponent } from './ui-kit.component';
 import {UiKitTableModule} from "./ui-kit-table/ui-kit-table.module";
 import { UiKitInputComponent } from './ui-kit-input/ui-kit-input.component';
 import { UiKitSelectComponent } from './ui-kit-select/ui-kit-select.component';
+import {UiKitAbstractFormControlModule} from './ui-kit-abstract-form-control/ui-kit-abstract-form-control.module';
+import {BaseComponentModule} from './base-component/base-component.module';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -16,11 +19,14 @@ import { UiKitSelectComponent } from './ui-kit-select/ui-kit-select.component';
   exports: [
     UiKitTableModule,
     UiKitSelectComponent,
-    UiKitInputComponent
+    UiKitInputComponent,
+    UiKitAbstractFormControlModule,
+    BaseComponentModule,
   ],
   imports: [
     CommonModule,
-    UiKitTableModule
+    UiKitTableModule,
+    FormsModule
   ]
 })
 export class UiKitModule { }
