@@ -18,6 +18,10 @@ const routes: Routes = [
       {
         path: 'rxjs',
         loadChildren: () => import('./rxjs/rxjs.module').then((m) => m.RxjsModule),
+      },
+      {
+        path: 'tutorials',
+        loadChildren: () => import('./tutorials/tutorials.module').then((m) => m.TutorialsModule),
       }
     ]
   }

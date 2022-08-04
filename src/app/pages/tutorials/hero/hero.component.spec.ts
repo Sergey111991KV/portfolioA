@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { UiKitInputComponent } from './ui-kit-input.component';
+import { HeroComponent } from './hero.component';
 
-describe('UiKitInputComponent', () => {
-  let component: UiKitInputComponent;
-  let fixture: ComponentFixture<UiKitInputComponent>;
+describe('HeroComponent', () => {
+  let component: HeroComponent;
+  let fixture: ComponentFixture<HeroComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ UiKitInputComponent ]
+      declarations: [ HeroComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(UiKitInputComponent);
+    fixture = TestBed.createComponent(HeroComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

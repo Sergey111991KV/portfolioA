@@ -1,16 +1,16 @@
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
-import { RxjsComponent } from "./rxjs.component";
+import { TutorialsComponent } from "./tutorials.component";
 
 const routes: Routes = [
   {
     path: '',
-    component: RxjsComponent,
+    component: TutorialsComponent,
     children: [
-      // {
-      //   path: 'ui-kit',
-      //   loadChildren: () => import('./rxjs.module').then((m) => m.RxjsModule),
-      // }
+      {
+        path: 'hero',
+        loadChildren: () => import('./hero/hero.module').then((m) => m.HeroModule),
+      }
     ]
   },
 ];
@@ -19,5 +19,5 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class RxjsRoutingModule {
+export class TutorialsRoutingModule {
 }

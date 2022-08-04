@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, OnChanges, OnInit, Optional, Self, Directive, ChangeDetectorRef} from '@angular/core';
+import {AfterViewInit, Component, OnChanges, OnInit, Optional, Self, Directive, ChangeDetectorRef, Input, EventEmitter, Output} from '@angular/core';
 import {ControlValueAccessor, NgControl} from "@angular/forms";
 import { BaseComponent } from '../base-component';
 
@@ -6,6 +6,11 @@ import { BaseComponent } from '../base-component';
   selector: 'app-ui-kit-abstract-form-control',
 })
 export class UiKitAbstractFormControl<T, U = T>  extends BaseComponent implements ControlValueAccessor, OnChanges, AfterViewInit {
+  /** Initial value */
+  @Input() public value: T | null = null;
+
+  /** Dispatching control value change event */
+  @Output() public valueChanged = new EventEmitter<U | null>();
 
   constructor(
     protected changeDetectorRef: ChangeDetectorRef,
@@ -23,8 +28,8 @@ export class UiKitAbstractFormControl<T, U = T>  extends BaseComponent implement
 
   public ngAfterViewInit(): void {}
 
-  public writeValue () {
-
+  public writeValue(value: T | null): void {
+    this.value = value;
   }
 
   public registerOnChange () {
