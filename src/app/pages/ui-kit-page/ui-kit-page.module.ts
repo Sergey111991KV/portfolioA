@@ -7,6 +7,7 @@ import { UiKitTablePageComponent } from './ui-kit-table-page/ui-kit-table-page.c
 import {UiKitModule} from "../../ui-kit/ui-kit.module";
 import { UiKitFormComponent } from './ui-kit-form/ui-kit-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UiKitSliderPageComponent } from './ui-kit-slider-page/ui-kit-slider-page.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     UiKitPageComponent,
     UiKitHomeComponent,
     UiKitTablePageComponent,
-    UiKitFormComponent
+    UiKitFormComponent,
+    UiKitSliderPageComponent
   ],
   imports: [
     CommonModule,

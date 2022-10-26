@@ -7,6 +7,7 @@ import { UiKitSelectComponent } from './ui-kit-select/ui-kit-select.component';
 import {UiKitAbstractFormControlModule} from './ui-kit-abstract-form-control/ui-kit-abstract-form-control.module';
 import {BaseComponentModule} from './base-component/base-component.module';
 import { FormsModule } from '@angular/forms';
+import { UiKitSliderComponent } from './ui-kit-slider/ui-kit-slider.component';
 
 
 
@@ -15,6 +16,7 @@ import { FormsModule } from '@angular/forms';
     UiKitComponent,
     UiKitInputComponent,
     UiKitSelectComponent,
+    UiKitSliderComponent,
   ],
   exports: [
     UiKitTableModule,

@@ -14,7 +14,8 @@ export class UiKitHomeComponent implements OnInit {
 
   public routes: string[] = [
     'cnv-table',
-    'cnv-form'
+    'cnv-form',
+    'tui-slider'
   ];
 
 }

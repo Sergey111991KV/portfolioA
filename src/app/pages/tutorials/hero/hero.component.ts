@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./hero.component.css']
 })
 export class HeroComponent implements OnInit {
-
+  title = 'Tour of Heroes';
   constructor() { }
 
   ngOnInit(): void {

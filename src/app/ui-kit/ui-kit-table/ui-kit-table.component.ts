@@ -1,20 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostBinding, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-ui-kit-table',
   templateUrl: './ui-kit-table.component.html',
   styleUrls: ['./ui-kit-table.component.scss'],
+  encapsulation: ViewEncapsulation.None,
   host: {
-    class: 'app-table',
+    class: 'app-ui-kit-table',
   },
 })
 export class UiKitTableComponent implements OnInit {
   // modes: string;
   constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  @HostBinding('class') public classes = '';
   // /** Table mode setter */
   // public set mode(value: CnvTableMode) {
   //   this.modes = value;
@@ -35,4 +33,12 @@ export class UiKitTableComponent implements OnInit {
   //     `;
   // }
 
+  /** @ignore */
+  public ngOnInit(): void {
+    this.applyClasses();
+  }
+
+  private applyClasses(): void {
+    this.classes = ``;
+  }
 }

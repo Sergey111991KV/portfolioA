@@ -1,22 +1,6 @@
-.app-table_mode_table {
+.app-ui-kit-table {
   display: table;
   width: 100%;
   margin-block: -5px;
   border-spacing: 0 5px;
-
-.app-no-data {
-  margin: 186px auto 20px;
-}
-}
-
-.app-table_mode_flex {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-
-.app-no-data {
-  align-self: center;
-  margin-top: 186px;
-  margin-bottom: 20px;
-}
 }

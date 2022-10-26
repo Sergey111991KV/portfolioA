@@ -8,7 +8,7 @@ const routes: Routes = [
     component: BadRequestComponent,
     children: [
       {
-        path: 'ui-kit',
+        path: '',
         loadChildren: () => import('./bad-request.module').then((m) => m.BadRequestModule),
       }
     ]

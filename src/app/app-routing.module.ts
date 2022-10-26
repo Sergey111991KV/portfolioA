@@ -1,7 +1,12 @@
 import { ExtraOptions, RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
+import {MainComponent} from "./main/main.component";
 
 const routes: Routes = [
+  {
+    path: '',
+    loadChildren: () => import('./main/main.module').then((m) => m.MainModule),
+  },
   {
     path: 'pages',
     loadChildren: () => import('./pages/pages.module').then((m) => m.PagesModule),
