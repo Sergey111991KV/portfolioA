@@ -24,6 +24,7 @@ import { UiKitSliderComponent } from './ui-kit-slider/ui-kit-slider.component';
     UiKitInputComponent,
     UiKitAbstractFormControlModule,
     BaseComponentModule,
+    UiKitSliderComponent,
   ],
   imports: [
     CommonModule,
