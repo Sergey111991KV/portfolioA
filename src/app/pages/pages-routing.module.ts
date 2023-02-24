@@ -8,8 +8,8 @@ const routes: Routes = [
     component: PagesComponent,
     children: [
       {
-        path: 'ui-kit',
-        loadChildren: () => import('./ui-kit-page/ui-kit-page.module').then((m) => m.UiKitPageModule),
+        path: 'dynamic-component',
+        loadChildren: () => import('./dynamic-component/dynamic-component.module').then((m) => m.DynamicComponentModule),
       },
       {
         path: 'pipes',
@@ -22,7 +22,11 @@ const routes: Routes = [
       {
         path: 'tutorials',
         loadChildren: () => import('./tutorials/tutorials.module').then((m) => m.TutorialsModule),
-      }
+      },
+      {
+        path: 'ui-kit',
+        loadChildren: () => import('./ui-kit-page/ui-kit-page.module').then((m) => m.UiKitPageModule),
+      },
     ]
   }
 ];
