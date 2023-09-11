@@ -32,3 +32,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ### npm i angular-cli-ghpages --save-dev
 ### ng build --prod --base-href "https://GitHubUserName.github.io/GitHubfolderName/"
 ### npx angular-cli-ghpages --dir=dist/Project-name
+
+
+init project with version of angular npx -p @angular/cli@12.2.18 ng new angular-ssr-test

@@ -12,6 +12,10 @@ const routes: Routes = [
         loadChildren: () => import('./dynamic-component/dynamic-component.module').then((m) => m.DynamicComponentModule),
       },
       {
+        path: 'dynamic-form',
+        loadChildren: () => import('./dynamic-form/dynamic-form.module').then((m) => m.DynamicFormModule),
+      },
+      {
         path: 'pipes',
         loadChildren: () => import('./pipes/pipes.module').then((m) => m.PipesModule),
       },

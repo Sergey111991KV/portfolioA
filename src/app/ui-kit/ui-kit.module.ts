@@ -8,6 +8,10 @@ import {UiKitAbstractFormControlModule} from './ui-kit-abstract-form-control/ui-
 import {BaseComponentModule} from './base-component/base-component.module';
 import { FormsModule } from '@angular/forms';
 import { UiKitSliderComponent } from './ui-kit-slider/ui-kit-slider.component';
+// import TaskComponent from './task/task.component';
+// import { UiKitOverflowComponent } from './ui-kit-overflow/ui-kit-overflow.component';
+// import { UiKitIconsComponent } from './ui-kit-icons/ui-kit-icons.component';
+// import { UiIconComponent } from './ui-kit-icons/ui-icon/ui-icon.component';
 
 
 
@@ -17,6 +21,10 @@ import { UiKitSliderComponent } from './ui-kit-slider/ui-kit-slider.component';
     UiKitInputComponent,
     UiKitSelectComponent,
     UiKitSliderComponent,
+    // TaskComponent,
+    // UiKitOverflowComponent,
+    // UiKitIconsComponent,
+    // UiIconComponent,
   ],
   exports: [
     UiKitTableModule,

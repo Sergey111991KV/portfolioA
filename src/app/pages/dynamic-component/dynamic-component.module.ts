@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {DynamicComponentRoutingModule} from "./dynamic-component-routing.module";
-import {DynamicComponentComponent} from "./dynamic-component.component";
+import {DynamicComponent} from "./dynamic-component.component";
+import { AlertComponent } from './alert/alert.component';
 
 @NgModule({
   declarations: [
-    DynamicComponentComponent
+    DynamicComponent,
+    AlertComponent
   ],
   imports: [
     CommonModule,
