@@ -9,7 +9,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  template: `<router-outlet></router-outlet>`
+  templateUrl: 'app.html'
 })
 export class AppComponent {
   title = 'portfolioAngular';

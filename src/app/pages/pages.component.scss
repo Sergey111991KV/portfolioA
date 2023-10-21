@@ -1,0 +1,12 @@
+nav{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+
+  a{
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #1976d2;
+  }
+}

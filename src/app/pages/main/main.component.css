@@ -1,0 +1,40 @@
+.bg{
+  position: fixed;
+  bottom: 0;
+  left: -50%;
+  right: -50%;
+  top: 0;
+  background: linear-gradient(-60deg, #c2f5b1 50%, #9de8f1 50%);
+  z-index: -1;
+  opacity: 0.5;
+  animation: slide 3s ease-in-out infinite alternate;
+}
+
+.content {
+  background-color: rgba(225, 225, 225, 0.4);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 16px;
+  padding: 10px;
+  box-shadow: 0 0 .25em rgba(0, 0, 0, 0.25);
+}
+
+@keyframes slide {
+  0%{
+    transform: translate(-25%);
+  }
+  100%{
+    transform: translate(25%);
+  }
+}
+
+.bg2 {
+  animation-duration: 4s;
+  animation-direction: alternate-reverse;
+}
+
+.bg3 {
+  animation-duration: 5s;
+}
