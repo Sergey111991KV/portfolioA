@@ -1,0 +1,120 @@
+@thumb-diameter: 1rem;
+@thumb-color: orange;
+
+@track-height: 0.125rem;
+@track-color: lightgray;
+@track-border-radius: 0.625rem;
+
+@ticks-thickness: 0.25rem;
+@tick-color: darkgrey;
+
+.customize-track(@progress-filling: false) {
+  height: @track-height;
+  border-radius: @track-border-radius;
+
+  @first-tick-offset: ((@thumb-diameter - @ticks-thickness) / 2);
+  @ticks-background-size: calc(100% - @thumb-diameter);
+
+  @hide-first-tick: linear-gradient(
+  to right,
+  @thumb-color 0px (@first-tick-offset + @ticks-thickness),
+  transparent @ticks-thickness
+  );
+  @ticks-gradient: repeating-linear-gradient(
+  to right,
+  @tick-color 0 @ticks-thickness,
+  transparent 0 var(--slider-segment-width)
+  );
+  @filling-progress-gradient: linear-gradient(
+  to right,
+  @thumb-color var(--slider-fill-percentage),
+  transparent var(--slider-fill-percentage)
+  );
+  background-repeat: no-repeat;
+  background-color: @track-color;
+
+  & when (@progress-filling = true) {
+  background-image: @hide-first-tick, @ticks-gradient,
+  @filling-progress-gradient;
+  background-position-x: 0, @first-tick-offset, 0;
+  background-size: @ticks-background-size, @ticks-background-size, auto;
+}
+
+  & when (@progress-filling = false) {
+  background-image: @hide-first-tick, @ticks-gradient;
+  background-position-x: 0, @first-tick-offset;
+  background-size: @ticks-background-size;
+}
+}
+
+.customize-thumb() {
+/* Clear browser default customization */
+  appearance: none;
+  border: none;
+/* _________ */
+
+  background-color: @thumb-color;
+  height: @thumb-diameter;
+  width: @thumb-diameter;
+  border-radius: 50%;
+
+:not(:disabled)& {
+  cursor: ew-resize;
+}
+
+:focus-visible& {
+  box-shadow: 0 0 0 2px inset rgba(51, 51, 51, 0.64);
+}
+}
+
+/* Vertically centers thumb on the track (webkit only) */
+.vertically-align-thumb() {
+  margin-top: (@track-height / 2) - (@thumb-diameter / 2);
+}
+
+:host {
+  /* Clear browser default customization */
+  appearance: none;
+  background-color: transparent;
+  outline: none;
+  /* _________ */
+
+  display: block;
+  width: 100%;
+  height: @track-height;
+  cursor: pointer;
+
+  /* To catch click events nearby THIN input's track */
+  padding: 0.4375rem 0;
+
+  &:active {
+    cursor: ew-resize;
+  }
+
+  &:disabled {
+    opacity: 0.56;
+    cursor: auto;
+  }
+
+  &::-webkit-slider-runnable-track {
+    .customize-track(true);
+  }
+
+  &::-moz-range-track {
+    .customize-track(false);
+  }
+
+  &::-webkit-slider-thumb {
+    .customize-thumb();
+    .vertically-align-thumb();
+  }
+
+  &::-moz-range-thumb {
+    .customize-thumb();
+  }
+
+  &::-moz-range-progress {
+    background: @thumb-color;
+    border-radius: @track-border-radius 0 0 @track-border-radius;
+  }
+}

@@ -1,6 +1,7 @@
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { PagesComponent } from "./pages.component";
+import {TuiModule} from "./tui/tui.module";
 
 const routes: Routes = [
   {
@@ -22,6 +23,14 @@ const routes: Routes = [
       {
         path: 'rxjs',
         loadChildren: () => import('./rxjs/rxjs.module').then((m) => m.RxjsModule),
+      },
+      {
+        path: 'shop',
+        loadChildren: () => import('./shop/shop.module').then((m) => m.ShopModule),
+      },
+      {
+        path: 'tui',
+        loadChildren: () => import('./tui/tui.module').then((m) => m.TuiModule),
       },
       {
         path: 'tutorials',

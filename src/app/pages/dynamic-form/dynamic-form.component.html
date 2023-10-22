@@ -1,0 +1,20 @@
+<h1>Form from model</h1>
+<form [formGroup]="registerForm">
+  <label>Name:<input type="text" formControlName="name" /></label>
+  <label>LastName: <input type="text" formControlName="lastName" /></label>
+  <label> Age: <input type="number" formControlName="age" /></label>
+</form>
+
+<h1>Form array model</h1>
+<form [formGroup]="registerForm">
+  <label>Name:<input type="text" formControlName="name" /></label>
+  <label>LastName: <input type="text" formControlName="lastName" /></label>
+  <label> Age: <input type="number" formControlName="age" /></label>
+</form>
+
+<h1>Form array </h1>
+<div *ngFor="let control of skills.controls; index as i">
+  <input [formControl]="skills.controls[i]" />
+  <button (click)="removeSkill(i)">X</button>
+</div>
+<button (click)="addSkill()">addSkill</button>
